@@ -1,0 +1,37 @@
+<template>
+    <require from="bootstrap/css/bootstrap.css"></require>
+    <require from="font-awesome/css/font-awesome.css"></require>
+    <section class="container-fluid">
+        <div class="page-header">
+            <h3>${title}</h3>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label>Array size</label>
+                <input type="number" value.bind="heapSize" class="form-control">
+            </div>
+            <div class="col-sm-2">
+                <label>Element min value</label>
+                <input type="number" value.bind="minValue" class="form-control">
+            </div>
+            <div class="col-sm-2">
+                <label>Element max value</label>
+                <input type="number" value.bind="maxValue" class="form-control">
+            </div>
+            <div class="col-sm-4">
+                <button type="button" click.trigger="generate()" class="btn btn-primary btn-lg">Generate</button>
+                <button type="button" click.trigger="generate()" class="btn btn-success btn-lg" disabled>HeapSort</button>
+            </div>
+            <div class="col-sm-2">
+            </div>
+        </div>
+        <div class="page-header">
+            <h4>Chart</h4>
+        </div>
+        <div class="parent-container">
+            <div class="element" repeat.for="elem of elements" style="height: ${elem.val}px; left: ${elem.index*7}px">
+                ${elem.val}
+            </div>
+        </div>
+    </section>
+</template>

@@ -1,0 +1,9 @@
+.parent-container{
+    position: relative;
+}
+.element{
+    position: absolute;
+    width: 5px;
+    background-color: #11aa11;
+    border: 1px solid #ccc;
+}
