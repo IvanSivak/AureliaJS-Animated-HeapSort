@@ -16,4 +16,9 @@ export class AppHeapSort {
             return { val: v, index: i }
         })
     }
+    
+    heapSort(){
+        if (this.elements.length == 0) return;
+        engine.heapSort(this.elements);
+    }
 }

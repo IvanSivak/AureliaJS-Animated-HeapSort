@@ -3,7 +3,9 @@
 }
 .element{
     position: absolute;
-    width: 5px;
+    width: 6px;
     background-color: #11aa11;
     border: 1px solid #ccc;
+    -webkit-transition: height 2s, -webkit-transform 2s;
+    transition: height 2s, transform 2s;
 }
