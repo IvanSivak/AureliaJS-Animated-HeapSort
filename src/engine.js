@@ -19,9 +19,13 @@ function iRightChild(index) {
 }
 
 function swapElements(array, a, b) {
-    var x = array[a].val;
+    var tempVal = array[a].val;
+        //tempStyle = array[a].style;
+        
     array[a].val = array[b].val;
-    array[b].val = x;
+    //array[a].style = array[b].style;
+    array[b].val = tempVal;
+    //array[b].style = tempStyle;
 }
 
 function heapify(array) {

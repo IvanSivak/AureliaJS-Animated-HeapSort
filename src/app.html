@@ -19,7 +19,7 @@
                 <input type="number" value.bind="maxValue" class="form-control">
             </div>
             <div class="col-sm-4">
-                <button type="button" click.trigger="generate()" class="btn btn-primary btn-lg">Generate</button>
+                <button type="button" click.trigger="generate()" class="btn btn-primary btn-lg">${buttonTitle}</button>
                 <button type="button" click.trigger="heapSort()" class="btn btn-success btn-lg">HeapSort</button>
             </div>
             <div class="col-sm-2">
@@ -29,7 +29,7 @@
             <h4>Chart</h4>
         </div>
         <div class="parent-container">
-            <div class="element" repeat.for="elem of elements" style="height: ${elem.val}px; left: ${elem.index * 7}px">
+            <div class="element" repeat.for="elem of elements" style.bind="elem.style">
             </div>
         </div>
     </section>
